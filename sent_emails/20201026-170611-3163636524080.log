@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?q?R=C3=A9initialisation_du_mot_de_passe_sur_localhost=3A8000?=
+From: webmaster@localhost
+To: aristofanesmithloko@gmail.com
+Date: Mon, 26 Oct 2020 16:06:11 -0000
+Message-ID: <160372837113.1640.952398546675363578@DESKTOP-FHEO0T3>
+
+
+Vous recevez ce message en réponse à votre demande de réinitialisation du mot de passe de votre compte sur localhost:8000.
+
+Veuillez vous rendre sur cette page et choisir un nouveau mot de passe :
+
+http://localhost:8000/accounts/reset/Mg/acd0ub-60b5cf8626429eae98e5e00f6c46d21f/
+
+Votre nom d’utilisateur, en cas d’oubli : arist
+
+Merci d’utiliser notre site !
+
+L’équipe localhost:8000
+
+
+
+-------------------------------------------------------------------------------

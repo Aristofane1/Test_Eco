@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+	<div class="container-fluid">
+		<div class="bg-top  d-flex justify-content-center align-items-center">
+		</div>
+		<div class="row">
+          {% for product in products %}
+            <div class="col-md-3 col-sm-6">
+                      <div class="product-grid3">
+                          <div class="product-image3">
+                              <a href="{% url 'product' product_id=product.id %}">
+                                  <img class="pic-1" src="{{product.imageURL}}">
+                                  <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo4/images/img-2.jpg">
+                              </a>
+                              <ul class="social">
+                                  <li><a href="{% url 'product' product_id=product.id %}"><i class="fa fa-eye"></i></a></li>
+                                  <li><a href="{% url 'cart_add' product.id %}"><i class="fa fa-shopping-cart"></i></a></li>
+                              </ul>
+                              <span class="product-new-label">New</span>
+                          </div>
+                          <div class="product-content">
+                              <h3 class="title"><a href="#">{{product.name}}</a></h3>
+                              <div class="price">
+                                  ${{product.price}}
+                                  <span>$75.00</span>
+                              </div>
+                              <ul class="rating">
+                                  <i class="fa fa-star" style="color: #ffd200;"></i>
+                                  <i class="fa fa-star" style="color: #ffd200;"></i>
+                                  <i class="fa fa-star" style="color: #ffd200;"></i>
+                                  <i class="fa fa-star" style="color: #dcdcdc;"></i>
+                                  <i class="fa fa-star" style="color: #dcdcdc;"></i>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+          {%endfor%} 
+    	</div>	
+	</div>
+
+{% endblock content %}

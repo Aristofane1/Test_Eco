@@ -1,0 +1,56 @@
+{% extends 'main.html'%}
+{% block content %}
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Create Account</h4>
+	<p class="text-center">Get started with your free account</p>
+	<form method="POST">
+	{% csrf_token %}
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> Username <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="username" class="form-control" placeholder="Full name" type="text">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> E-mail <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="email" class="form-control" placeholder="Email address" type="email">
+    </div> <!-- form-group// -->
+<!--    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> Number <i class="fa fa-phone"></i> </span>
+		</div>
+		<select class="custom-select" style="max-width: 120px;">
+		    <option selected="">+971</option>
+		    <option value="1">+972</option>
+		    <option value="2">+198</option>
+		    <option value="3">+701</option>
+		    <option value="4">+229</option>
+		</select>
+    	<input name="number" class="form-control" placeholder="Phone number" type="text">
+    </div>--> <!-- form-group// -->
+
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> Password <i class="fa fa-lock"></i> </span>
+		</div>
+        <input name="password1" class="form-control" placeholder="Create password" type="password">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> Password <i class="fa fa-lock"></i> </span>
+		</div>
+        <input name="password2" class="form-control" placeholder="Repeat password" type="password">
+    </div> <!-- form-group// -->
+
+    	<button class="btn btn-primary btn-block " type="submit">Create Account</button>
+  <!-- form-group// -->
+    <p class="text-center">Have an account? <a href="{% url 'login' %}">Log In</a> </p>
+</form>
+</article>
+</div>
+
+{% endblock %}

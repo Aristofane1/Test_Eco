@@ -1,0 +1,56 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load cart_tag%}
+{% block content %}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="box-element">
+
+				<a  class="btn btn-outline-dark" href="{% url 'home' %}">&#x2190; Continue Shopping</a>
+
+				<br>
+				<br>
+				<table class="table">
+					<tr>
+						<th><h5>Items: <strong>{{request.session.cart|length}}</strong></h5></th>
+						<th><h5>Total:<strong> $1000</strong></h5></th>
+						<th>
+							<a  style="float:right; margin:5px;" class="btn btn-success" href="{% url 'checkout' %}">Checkout</a>
+						</th>
+					</tr>
+				</table>
+
+			</div>
+
+			<br>
+			<div class="box-element">
+				<div class="cart-row">
+					<div style="flex:2"></div>
+					<div style="flex:2"><strong>Item</strong></div>
+					<div style="flex:1"><strong>Price</strong></div>
+					<div style="flex:1"><strong>Quantity</strong></div>
+					<div style="flex:1"><strong>Total</strong></div>
+				</div>
+				{%for key, value in request.session.cart.items%}
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{{value.image}}"></div>
+					<div style="flex:2"><p>{{value.name}}</p></div>
+					<div style="flex:1"><p>${{value.price}}</p></div>
+					<div style="flex:1">
+						<p class="quantity">{{value.quantity}}</p>
+						<div class="quantity">
+							<a href="{% url 'item_increment' value.product_id %}"><img  class="chg-quantity update-cart" src="#"></a>
+					
+							<a href="{% url 'item_decrement' value.product_id %}"><img class="chg-quantity update-cart" src="#"></a>
+						</div>
+					</div>
+					<div style="flex:1"><p>${{ value.price|multiply:value.quantity }}</p></div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}

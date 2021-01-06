@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?q?R=C3=A9initialisation_du_mot_de_passe_sur_localhost=3A8000?=
+From: webmaster@localhost
+To: claude@gmail.com
+Date: Mon, 26 Oct 2020 19:43:59 -0000
+Message-ID: <160374143927.3212.13871693997506064388@DESKTOP-FHEO0T3>
+
+
+Vous recevez ce message en réponse à votre demande de réinitialisation du mot de passe de votre compte sur localhost:8000.
+
+Veuillez vous rendre sur cette page et choisir un nouveau mot de passe :
+
+http://localhost:8000/accounts/reset/Mw/acdaxb-b465c97a4e42cd7e521ce5ef617931b5/
+
+Votre nom d’utilisateur, en cas d’oubli : claude
+
+Merci d’utiliser notre site !
+
+L’équipe localhost:8000
+
+
+
+-------------------------------------------------------------------------------

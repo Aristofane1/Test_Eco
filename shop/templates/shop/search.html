@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+{% for product in product %}
+	<div class="row box-element product">
+			<div class="col-lg-4">
+				<img class="thumbnail" src="{{product.imageURL}}">
+			</div>
+			<div class="col-lg-8 ">
+				<h6><strong>{{product.name}}</strong></h6>
+				<hr>
+
+				<button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+				<a class="btn btn-outline-success" href="{% url 'product' product_id=product.id %}">View</a>
+				<h4 style="display: inline-block; float: right"><strong>${{product.price}}</strong></h4>
+				<p>{{ product.detail|truncatewords:20 }}</p>
+			
+			</div>
+			
+	</div>
+{%endfor%}
+<!--
+	{% comment %}
+{% empty %}
+    {% include "shop/error404.html" %}
+{% endfor %}
+{% endcomment %}
+-->
+{% endblock content %}

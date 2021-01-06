@@ -1,0 +1,32 @@
+{% extends 'main.html'%}
+{% block content %}
+{% if form.errors %}
+<p>Incorrect</p>
+{% endif %}
+<div class="card bg-dark">
+  <article class="card-body mx-auto" style="max-width: 250px;">
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form-group ">
+        <!--img class="mb-4" src="#" alt="" width="72" height="72"-->
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="username" name="username" id="input" class="form-control" placeholder="Username" required=""
+          autofocus="">
+        <br>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password"
+          required="">
+
+      </div>
+      <div>
+        <button class="btn btn-md btn-primary " type="submit">Sign in</button>
+      </div>
+
+      <p><a href="{% url 'password_reset' %}">Forget Password!</a></p>
+      <p class="text-center">You haven't account? <a href="{% url 'sign_in' %}">Sign in</a> </p>
+    </form>
+  </article>
+</div>
+
+{% endblock %}
